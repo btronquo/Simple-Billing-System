@@ -19,6 +19,14 @@
             </div>
             </div>
         </div>
+        <div class="col-md-3">
+            <div class="card bg-default">
+            <div class="card-body">
+                <h5 class="card-title text-center">{{ $customers->count() }}</h5>
+                <p class="card-text text-center"><b>Fiche client</b></p>
+            </div>
+            </div>
+        </div>
 
     </div>
 
