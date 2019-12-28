@@ -28,3 +28,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('references', 'ReferenceController');
 
 Route::resource('customers', 'CustomerController');
+
+Route::resource('billings', 'BillingController');
