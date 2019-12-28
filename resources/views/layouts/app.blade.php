@@ -41,7 +41,7 @@
                             <a class="nav-link" href="/home"><i class="fas fa-home"></i> Dashboard</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/billing"><i class="fas fa-file-invoice-dollar"></i> Factures</a>
+                            <a class="nav-link" href="/billings"><i class="fas fa-file-invoice-dollar"></i> Factures</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/references"><i class="far fa-list-alt"></i> References</a>
