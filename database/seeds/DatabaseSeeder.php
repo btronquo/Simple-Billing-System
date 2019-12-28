@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
         $this->call(PaiementStatesTableSeeder::class);
         $this->call(UsersTableSeeder::class);
         $this->call(CompagnyTypeTableSeeder::class);
+        $this->call(ReferencesTableSeeder::class);
         // Re enable all mass assignment restrictions
     }
 }
