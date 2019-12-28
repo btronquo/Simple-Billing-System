@@ -6,8 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Customer extends Model
 {
+
+    public function compagnyType()
+    {
+        return $this->belongsTo('App\CompagnyType', 'type_id');
+    }
+
     protected $fillable = [
-        'type',
+        'type_id',
         'name',
         'address_line_1',
         'address_line_2',

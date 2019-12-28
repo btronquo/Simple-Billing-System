@@ -23,10 +23,10 @@
                         <div class="form-group">
                             @csrf
                             <label for="type">Type de société :</label>
-                            <select class="form-control" name="type">
-                                <option value="AE">AE</option>
-                                <option value="SAS">SAS</option>
-                                <option value="SARL">SARL</option>
+                            <select class="form-control" name="type_id">
+                                @foreach($compagnytypes as $id => $compagnytype)
+                                  <option value="{{ $compagnytype->type_id }}">{{ $compagnytype->name }}</option>
+                                @endforeach
                             </select>
                         </div>
                         <div class="form-group">

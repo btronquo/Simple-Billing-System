@@ -24,12 +24,12 @@
                         <div class="form-group">
                             @csrf
                             @method('PATCH')
-                            <label for="type">Type de société :</label>
-                            <select class="form-control" name="type">
-                                <option value="{{ $customer->type }}">{{ $customer->type }}</option>
-                                <option value="AE">AE</option>
-                                <option value="SAS">SAS</option>
-                                <option value="SARL">SARL</option>
+                            <label for="type_id">Type de société :</label>
+                            <select class="form-control" name="type_id">
+                                <option value="{{ $customer->compagnyType->type_id }}" selected>{{ $customer->compagnyType->name }}</option>
+                                @foreach($compagnytypes as $id => $compagnytype)
+                                  <option value="{{ $compagnytype->type_id }}">{{ $compagnytype->name }}</option>
+                                @endforeach
                             </select>
                         </div>
                         <div class="form-group">

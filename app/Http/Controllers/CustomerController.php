@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Customer;
+use App\CompagnyType;
 
 class CustomerController extends Controller
 {
@@ -35,7 +36,8 @@ class CustomerController extends Controller
      */
     public function create()
     {
-        return view('customer/create');
+        $compagnytypes = CompagnyType::all();
+        return view('customer/create', compact('compagnytypes'));
     }
 
     /**
@@ -47,7 +49,7 @@ class CustomerController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'type' => 'required|max:10',
+            'type_id' => 'required',
             'name' => 'required|max:100',
             'address_line_1' => 'required|max:100',
             'address_line_2' => 'max:100',
@@ -82,8 +84,11 @@ class CustomerController extends Controller
      */
     public function edit($id)
     {
+
+        $compagnytypes = CompagnyType::all();
+
         $customer = Customer::findOrFail($id);
-        return view('/customer/edit', compact('customer'));
+        return view('/customer/edit', compact('customer', 'compagnytypes'));
     }
 
     /**
@@ -96,7 +101,7 @@ class CustomerController extends Controller
     public function update(Request $request, $id)
     {
         $validatedData = $request->validate([
-            'type' => 'required|max:10',
+            'type_id' => 'required',
             'name' => 'required|max:100',
             'address_line_1' => 'required|max:100',
             'address_line_2' => 'max:100',
