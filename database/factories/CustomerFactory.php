@@ -6,9 +6,6 @@ use App\Customer;
 use Faker\Generator as Faker;
 
 $factory->define(Customer::class, function (Faker $faker) {
-
-
-
     return [
         'type_id' => $faker->numberBetween(1,6),
         'name' => $faker->company,
