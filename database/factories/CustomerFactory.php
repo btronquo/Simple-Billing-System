@@ -10,7 +10,7 @@ $factory->define(Customer::class, function (Faker $faker) {
 
 
     return [
-        'type' => $faker->randomDigit,
+        'type_id' => $faker->numberBetween(1,6),
         'name' => $faker->company,
         'address_line_1' => $faker->streetAddress,
         'address_line_2' => $faker->secondaryAddress,
